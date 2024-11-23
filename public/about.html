@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Cyber Security Gradient */
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #222831;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
+      background-color: #393e46;
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+
+    header nav ul li {
+      padding: 8px 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: 0.3s;
+      border-radius: 6px;
+    }
+
+    header nav ul li:hover {
+      background-color: #00adb5;
+      color: #000;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    header nav ul li .active {
+      color: #00adb5;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+      z-index: 5; /* Ensure it's above the cyber lines */
+    }
+
+    main h1 {
+      text-align: center;
+      color: #00adb5;
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    main ul {
+      list-style-type: none;
+      margin: 1.5rem 0;
+      padding: 0;
+    }
+
+    main ul li {
+      background-color: rgba(0, 173, 181, 0.2);
+      margin-bottom: 1rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    main ul li mark {
+      background-color: #00adb5;
+      color: #000;
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background-color: #222831;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 2px;
+      background: #00adb5;
+      margin: 0 auto 10px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Cyber Lines */
+    .cyber-lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0; /* Keep it behind everything */
+    }
+
+    .line {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: rgba(0, 255, 255, 0.2);
+      animation: cyber 6s linear infinite;
+    }
+
+    .line:nth-child(odd) { animation-duration: 4s; }
+
+    @keyframes cyber {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+
+    .line:nth-child(1) { left: 10%; }
+    .line:nth-child(2) { left: 30%; }
+    .line:nth-child(3) { left: 50%; }
+    .line:nth-child(4) { left: 70%; }
+    .line:nth-child(5) { left: 90%; }
+
+    /* Play/Pause button */
+    .play-pause-btn {
+      position: absolute;
+      top: 10px; /* ห่างจากขอบบนของ footer 10px */
+      right: 10px; /* ห่างจากขอบขวาของ footer 10px */
+      padding: 10px 20px;
+      background: #00adb5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Audio Player -->
+   <audio id="background-music" src="../music/peaches.mp3" loop></audio>
+
+  <div class="cyber-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../page.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 2rem;">
+      <!-- รูปภาพที่ 1 -->
+      <img src="../picture/image/Me.jpg" alt="Profile Picture 1" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.5); object-fit: cover;">
+    
+      <!-- รูปภาพที่ 2 -->
+      <img src="../picture/image/pictop.jpg" alt="Profile Picture 2" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.5); object-fit: cover;">
+    </div>
+    
+    
+    <p>สวัสดีครับบบ 🙌</p>
+    <p>ผมชื่อ นาย นรายล กรบัณฑิตย์ อายุ 20 ปี </p>
+    <p>เรียนอยู่ที่ คณะวิทยาศาสตร์และเทคโนโลยี สาขา วิทยาการคอมพิวเตอร์ แบ่งเป็น 2 สายคือ COMSCI กับ IT ผมนั้นเรียนสาย <mark>IT</mark></p>
+    <p>นิยามการใช้ชีวิตผมมี 4 นิยามที่ชอบที่สุด</p>
+    <ul>
+      <li>"โอกาส"ไม่เคยลอยมาหาคนที่นั่งคอยอยู่กับที่แต่โอกาส มักจะวิ่งเข้าคนที่กำลังวิ่งอยู่เช่นกัน</li>
+      <li>"ถ้าคุณไม่ได้มาจาก<mark>ครอบครัวที่ร่ำรวย</mark> งั้นครอบครัวที่ร่ำรวย<mark>ก็ต้องมาจากคุณ</mark>"</li>
+      <li>ความล้มเหลวไม่ใช่สิ่งที่ตรงกันข้ามกับความสำเร็จ แต่มันเป็นส่วนหนึ่งของความสำเร็จ</li>
+      <li>No friends, No problem. No girlfriend/boyfriend, No problem. <mark>NO CASH💰💵 BIG PROBLEM</mark></li>
+    </ul>
+    <p>สิ่งที่ชอบ: ชอบตอนมีเงิน เพราะมีเงินอยากจะซื้ออะไรก็ได้</p>
+    <p>สิ่งที่ไม่ชอบ: ไม่ชอบตอนไม่มีเงิน เพราะถ้าไม่มีเงินก็ใช้ชีวิตไม่มีความสุข</p>
+    <!-- Play/Pause Button -->
+    <button id="play-pause-btn" class="play-pause-btn">Play Music</button>
+  </main>
+  
+
+  <footer>
+    <p>&copy; 2024 NARAYOL_CS&IT. All rights reserved.</p>
+
+     
+    </footer>
+  
+    <script>
+      const music = document.getElementById("background-music");
+      const playPauseBtn = document.getElementById("play-pause-btn");
+  
+      // เริ่มต้นให้เพลงหยุด และปุ่มแสดงข้อความ "Play Music"
+      let isPlaying = false;
+  
+      // ฟังก์ชันที่ใช้เล่นหรือหยุดเพลง
+      playPauseBtn.addEventListener("click", () => {
+        if (isPlaying) {
+          music.pause();
+          playPauseBtn.textContent = "Play Music";
+        } else {
+          music.play().catch(err => console.log("Failed to play:", err));
+          playPauseBtn.textContent = "Pause Music";
+        }
+        isPlaying = !isPlaying;
+      });
+  
+      // กำหนดให้เพลงเริ่มต้นที่ปุ่ม Play
+      music.volume = 0.3; // ปรับเสียงให้เป็น 30%
+    </script>
+</body>
+</html>

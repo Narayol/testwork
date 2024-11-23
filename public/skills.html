@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #eee;
+            line-height: 1.6;
+            height: 100vh;
+            background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Cyber Security Gradient */
+        }
+
+        header {
+            background-color: #222831;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header nav ul {
+            width: 100%;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            background-color: #393e46;
+            border-radius: 6px;
+            margin: 0;
+        }
+
+        header nav ul li {
+            list-style: none;
+            padding: 12px 24px;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.4s ease-in-out;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        header nav ul li:hover {
+            background-color: #00adb5;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-align: center;
+            color: #00adb5;
+        }
+
+        .skills-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #eee;
+        }
+
+        meter {
+            width: 70%;
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        meter::-webkit-meter-bar {
+            background: #333;
+            border-radius: 10px;
+        }
+
+        meter::-webkit-meter-optimum-value {
+            background: #4caf50;
+        }
+
+        meter::-webkit-meter-suboptimum-value {
+            background: #ff9800;
+        }
+
+        meter::-webkit-meter-even-less-good-value {
+            background: #f44336;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222831;
+            color: #eee;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            display: block;
+            width: 80%;
+            height: 2px;
+            background: #00adb5;
+            margin: 0 auto 10px;
+        }
+
+        footer h3 a {
+            color: #00adb5;
+            text-decoration: none;
+        }
+
+        footer h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .cyber-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .line {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: rgba(0, 255, 255, 0.2);
+            animation: cyber 6s linear infinite;
+        }
+
+        .line:nth-child(odd) {
+            animation-duration: 4s;
+        }
+
+        @keyframes cyber {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .line:nth-child(1) { left: 10%; }
+        .line:nth-child(2) { left: 30%; }
+        .line:nth-child(3) { left: 50%; }
+        .line:nth-child(4) { left: 70%; }
+        .line:nth-child(5) { left: 90%; }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../page.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="skills-container">
+        <h1>Skills</h1>
+        <hr>
+
+        <div class="skill-item">
+            <label for="thai">Thai:</label>
+            <meter id="thai" min="0" max="100" value="100">100/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="english">English:</label>
+            <meter id="english" min="0" max="100" value="50">50/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="csharp">C#:</label>
+            <meter id="csharp" min="0" max="100" value="20">20/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="java">Java:</label>
+            <meter id="java" min="0" max="100" value="50">50/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="html">HTML:</label>
+            <meter id="html" min="0" max="100" value="90">90/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="css">CSS:</label>
+            <meter id="css" min="0" max="100" value="60">60/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="photoshop">Photoshop:</label>
+            <meter id="photoshop" min="0" max="100" value="95">95/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="illustrator">Adobe Illustrator:</label>
+            <meter id="illustrator" min="0" max="100" value="90">90/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="patience">Patience:</label>
+            <meter id="patience" min="0" max="100" value="100">100/100</meter>
+        </div>
+
+        <div class="skill-item">
+            <label for="tech-skills">Technological skills:</label>
+            <meter id="tech-skills" min="0" max="100" value="90">90/100</meter>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 NARAYOL_CS&IT. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

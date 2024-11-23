@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #222831;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
+      background-color: #393e46;
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+
+    header nav ul li {
+      padding: 8px 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: 0.3s;
+      border-radius: 6px;
+    }
+
+    header nav ul li:hover {
+      background-color: #00adb5;
+      color: #000;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    header nav ul li .active {
+      color: #00adb5;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    main h1 {
+      text-align: center;
+      color: #00adb5;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+
+    main h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    main p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    main a img {
+      width: 50px;
+      height: 50px;
+      margin: 0 15px;
+      transition: transform 0.3s ease;
+    }
+
+    main a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background-color: #222831;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 80%;
+      height: 2px;
+      background: #00adb5;
+      margin: 0 auto 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../page.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Contact Me</h1>
+      <h2>มี 4 ช่องทางให้ติดต่อและติดตาม</h2>
+      <p>
+        <a href="https://www.instagram.com/nraayl/">
+          <img src="../picture/image/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100015199801969">
+          <img src="../picture/image/facebook.png" alt="Facebook">
+        </a>
+        <a href="mailto:655021000972@mail.rmutk.ac.th">
+          <img src="../picture/image/gmail.png" alt="Gmail">
+        </a>
+        <a href="https://www.tiktok.com/@meen_474">
+          <img src="../picture/image/tiktok.png" alt="TikTok">
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 NARAYOL_CS&IT. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
